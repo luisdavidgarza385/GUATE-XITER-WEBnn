@@ -175,7 +175,7 @@ function verifyToken(token) {
 // Helper para sanitizar claves de Firebase (evitar caracteres prohibidos)
 function sanitizeKey(key) {
   if (!key) return "";
-  return key.toLowerCase().replace(/[.#$\/\[\]]/g, "_");
+  return key.toLowerCase().replace(/[.@#$\/\[\]]/g, "_");
 }
 
 module.exports = {
