@@ -1,0 +1,97 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "users": {
+      ".read": false,
+      ".write": false
+    },
+
+    "keys_pool": {
+      ".read": false,
+      ".write": false
+    },
+
+    "products": {
+      ".read": true,
+      ".write": false
+    },
+
+    "recommendations": {
+      ".read": true,
+      ".write": true,
+      "$recom_id": {
+        ".validate": "newData.hasChildren(['id', 'name', 'message', 'rating'])",
+        "id": {
+          ".validate": "newData.val() === data.child('id').val() || newData.isNumber()"
+        },
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 50"
+        },
+        "message": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
+        },
+        "rating": {
+          ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 5"
+        },
+        "date": {
+          ".validate": "newData.isString()"
+        },
+        "avatar": {
+          ".validate": "newData.isString()"
+        },
+        "isAdmin": {
+          ".validate": "newData.isBoolean()"
+        }
+      }
+    },
+
+    "background_url": {
+      ".read": true,
+      ".write": false
+    },
+
+    "music_config": {
+      ".read": true,
+      ".write": false
+    },
+
+    "site_config": {
+      ".read": false,
+      ".write": false,
+      "gemini_api_key": {
+        ".read": false,
+        ".write": false
+      }
+    },
+
+    "stats": {
+      ".read": true,
+      ".write": true,
+      "total_views": {
+        ".validate": "newData.isNumber()",
+        ".write": true
+      },
+      "online_users": {
+        ".validate": "newData.isNumber()",
+        ".write": true
+      },
+      "total_visitors": {
+        ".validate": "newData.isNumber()",
+        ".write": true
+      },
+      "viewed_visitors": {
+        ".write": true,
+        "$visitor_id": {
+          ".validate": "newData.hasChild('at')"
+        }
+      }
+    },
+
+    "historial": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

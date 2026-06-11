@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUATE XITER PRO – Web Actualizada 2026</title>
+  <meta name="description" content="GUATE XITER PRO actualizado 2026: panel SaaS premium con bypass, descargas seguras, IA asistente y soporte 24/7. Nuevo diseño cyberpunk.">
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://file.vahalla.cc/88e302f9.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- SPLASH / INTRO SCREEN (solo primera vez)      -->
+  <!-- ============================================= -->
+  <div id="intro-screen">
+    <canvas id="intro-canvas"></canvas>
+    <div class="intro-content">
+      <div class="intro-logo-ring">
+        <img src="https://file.vahalla.cc/88e302f9.png" alt="GUATE XITER" class="intro-logo">
+      </div>
+      <div class="intro-title-wrap">
+        <h1 class="intro-title glitch-text" data-text="GUATE XITER PRO">GUATE XITER PRO</h1>
+        <p class="intro-subtitle" id="intro-typing-text"></p>
+      </div>
+      <div class="intro-progress-wrap">
+        <div class="intro-progress-bar" id="intro-progress-bar"></div>
+        <div class="intro-progress-labels">
+          <span id="intro-progress-text">Iniciando sistema...</span>
+          <span id="intro-progress-percent">0%</span>
+        </div>
+      </div>
+      <div class="intro-badges">
+        <span class="intro-badge">⚡ ULTRA VELOZ</span>
+        <span class="intro-badge">🛡 ANTIDETECT</span>
+        <span class="intro-badge">💎 PREMIUM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- TOAST NOTIFICATION CONTAINER                  -->
+  <!-- ============================================= -->
+  <div id="toast-container"></div>
+
+  <!-- ============================================= -->
+  <!-- TICKER DE ANUNCIOS                            -->
+  <!-- ============================================= -->
+  <div class="announcement-ticker" id="announcement-ticker">
+    <div class="ticker-inner">
+      <span class="ticker-label">🔴 EN VIVO</span>
+      <div class="ticker-track">
+        <div class="ticker-content">
+          🚀 Nueva actualización Web 2026 con diseño renovado &nbsp;|&nbsp;
+          🔥 Oferta especial: Plan FULL con 20% de descuento este fin de semana &nbsp;|&nbsp;
+          💎 Usuario <strong>KingGT_05</strong> acaba de comprar Panel Pro &nbsp;|&nbsp;
+          ⚡ Servidor SaaS al 99.9% de uptime – Sin interrupciones &nbsp;|&nbsp;
+          🛡 Bypass actualizado contra último parche de Free Fire &nbsp;|&nbsp;
+          🎮 Más de 500 usuarios activos este mes &nbsp;|&nbsp;
+          💰 Recarga tu saldo y obtén licencias al instante &nbsp;|&nbsp;
+          📦 Nuevos emuladores disponibles en Centro de Descargas
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fondo premium: aurora + partículas suaves -->
+  <div class="site-background" aria-hidden="true">
+    <div class="bg-mesh"></div>
+    <div class="bg-aurora bg-aurora-1"></div>
+    <div class="bg-aurora bg-aurora-2"></div>
+    <div class="bg-aurora bg-aurora-3"></div>
+    <div class="bg-grid"></div>
+    <div id="bg-custom-image" class="bg-custom-image"></div>
+    <div class="bg-vignette"></div>
+  </div>
+  <canvas id="particles"></canvas>
+  <div class="bg-overlay"></div>
+
+  <!-- NAVEGACIÓN PREMIUM FLOTANTE -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <img id="nav-logo" class="logo-nav" src="https://file.vahalla.cc/66b93f29.png" alt="GUATE XITER">
+      <span class="nav-title">GUATE XITER PRO</span>
+    </div>
+
+    <ul id="nav-list">
+      <li id="tab-home" class="active" onclick="clickSound();show('home')">🚀 Inicio</li>
+      <li id="tab-info" onclick="clickSound();show('info')">📌 Info</li>
+      <li id="tab-stats" onclick="clickSound();show('stats')">📊 Stats</li>
+      <li id="tab-vend" onclick="clickSound();show('vend')">🔥 Vendedores</li>
+      <li id="tab-redes" onclick="clickSound();show('redes')">🌐 Redes</li>
+      <li id="tab-prod" onclick="clickSound();show('prod')">🧩 Productos</li>
+      <li id="tab-price" onclick="clickSound();show('price')">💰 Precios</li>
+      <li id="tab-buy" onclick="clickSound();show('buy')">🛒 Comprar</li>
+      <li id="tab-rank" onclick="clickSound();show('rank')">👑 Rank VIP</li>
+      <li id="tab-recom" onclick="clickSound();show('recom')">💬 Recomendaciones</li>
+      <li id="tab-faq" onclick="clickSound();show('faq')">❓ FAQ</li>
+      <li id="tab-desc" onclick="clickSound();show('desc','tab-desc');switchAiMode('support')">🎮 IA Soporte</li>
+      <li id="tab-student" onclick="clickSound();show('desc','tab-student');switchAiMode('student')">📚 IA Estudiantes</li>
+      <li id="tab-cont" onclick="clickSound();show('cont')">📞 Contacto</li>
+      <li id="nav-auth-tab" onclick="clickSound();show('auth')" style="border: 1px solid var(--secondary-glow); color: var(--secondary);">🔑 Acceder</li>
+      <li id="nav-profile-tab" onclick="clickSound();show('profile')" style="display: none; border: 1px solid var(--primary-glow); color: var(--primary);">👤 Mi Perfil</li>
+      <li id="nav-recharge-tab" onclick="clickSound();show('recharge')" style="display: none; border: 1px solid rgba(57,255,20,0.5); color: #39ff14;">💳 Saldo</li>
+    </ul>
+
+    <!-- Burger Menu -->
+    <button class="burger-btn" id="burger-btn" onclick="toggleMobileMenu()">☰</button>
+  </nav>
+  <div class="update-banner">
+    ✅ Sitio actualizado 2026: nuevo diseño, funciones premium y soporte mejorado. Navega por las secciones para ver lo nuevo.
+  </div>
+
+  <!-- ============================================= -->
+  <!-- HOME (INICIO)                                 -->
+  <!-- ============================================= -->
+  <section id="home" class="section active">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">🌟 WEB ACTUALIZADA 2026 – NUEVAS FUNCIONES</div>
+        <h1>GUATE XITER PRO</h1>
+        <p>
+          Sitio táctico renovado con diseño cyberpunk, panel SaaS premium, bypass actualizado y soporte 24/7.
+          Descargas seguras, IA asistente y acceso rápido a productos de alto rendimiento.
+        </p>
+
+        <div class="hero-features">
+          <div class="feature-item"><span class="icon">✔</span> Panel SaaS Profesional</div>
+          <div class="feature-item"><span class="icon">✔</span> Diseño Neon RGB 3D</div>
+          <div class="feature-item"><span class="icon">✔</span> Centro de Descargas</div>
+          <div class="feature-item"><span class="icon">✔</span> Bypass Ultra Estable</div>
+          <div class="feature-item"><span class="icon">✔</span> Pagos con PayPal</div>
+          <div class="feature-item"><span class="icon">✔</span> Sistema de Saldo</div>
+        </div>
+
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <button class="btn" onclick="clickSound();show('prod')">
+            🚀 VER PRODUCTOS
+          </button>
+          <button class="btn secondary-btn" onclick="clickSound();show('auth')">
+            🔑 INICIAR SESIÓN
+          </button>
+          <button class="btn paypal-hero-btn" onclick="clickSound();show('recharge')">
+            💳 RECARGAR SALDO
+          </button>
+        </div>
+
+        <div class="stats">
+          <div class="card mini tilt-3d">
+            <h3>⚡ Ultra Veloz</h3>
+            <p>Latencia reducida al mínimo</p>
+          </div>
+          <div class="card mini tilt-3d">
+            <h3>🛡 Antidetect</h3>
+            <p>Bypass de seguridad</p>
+          </div>
+          <div class="card mini tilt-3d">
+            <h3>⚙ SaaS Core</h3>
+            <p>Dashboard interactivo</p>
+          </div>
+          <div class="card mini tilt-3d">
+            <h3>💎 Premium</h3>
+            <p>Estilo e-sports 3D</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GIF FLOTANTE EN 3D -->
+      <div class="hero-image-container">
+        <div class="hero-glow-ring"></div>
+        <img class="heroimg" src="https://file.vahalla.cc/edd21334.gif" alt="Panel Preview">
+      </div>
+    </div>
+
+    <!-- ESTADÍSTICAS HERO ANIMADAS -->
+    <div class="hero-stats-strip">
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" data-count="500">0</span>
+        <span class="hero-stat-label">Usuarios Activos</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" data-count="1200">0</span>
+        <span class="hero-stat-label">Descargas Totales</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" data-count="99">0</span>
+        <span class="hero-stat-label">% Uptime</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" data-count="24">0</span>
+        <span class="hero-stat-label">Horas de Soporte</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- INFO                                          -->
+  <!-- ============================================= -->
+  <section id="info" class="section">
+    <h2>📌 Información del Panel</h2>
+    <div class="card tilt-3d" style="max-width: 900px; margin: 0 auto;">
+      <h3 style="color: var(--primary); text-shadow: 0 0 10px var(--primary-glow);">🚀 ¿Qué es GUATE XITER PRO?</h3>
+      <p>
+        Es una plataforma digital premium diseñada para jugadores profesionales y desarrolladores. Permite gestionar descargas de software, emuladores optimizados, bypass seguros y enlazar credenciales del panel de manera robusta y cifrada.
+      </p>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 25px;">
+        <div>
+          <h4 style="color: var(--secondary); margin-bottom: 8px;">🧩 Características</h4>
+          <p style="font-size: 13.5px; line-height: 1.6;">
+            ✔ Interfaz tipo app moderna<br>
+            ✔ Efectos visuales interactivos<br>
+            ✔ Licenciamiento en la nube<br>
+            ✔ Controles simplificados
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--primary); margin-bottom: 8px;">🔥 Rendimiento</h4>
+          <p style="font-size: 13.5px; line-height: 1.6;">
+            ✔ Optimizado para uso local<br>
+            ✔ Bajo consumo de memoria RAM<br>
+            ✔ Ejecución en segundo plano<br>
+            ✔ Carga instantánea de secciones
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent); margin-bottom: 8px;">🛡 Seguridad</h4>
+          <p style="font-size: 13.5px; line-height: 1.6;">
+            ✔ Cifrado de credenciales<br>
+            ✔ Vinculación HWID única<br>
+            ✔ Bypass integrado para juegos<br>
+            ✔ Protección contra volcados
+          </p>
+        </div>
+      </div>
+
+      <!-- TESTIMONIOS -->
+      <div style="margin-top: 35px;">
+        <h3 style="color: var(--secondary); margin-bottom: 20px;">⭐ Testimonios de Usuarios</h3>
+        <div class="testimonials-grid">
+          <div class="testimonial-card tilt-3d">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"El mejor bypass que he usado, lleva 3 meses activo sin un solo ban. Soporte excelente de SAMU."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">🎮</div>
+              <div>
+                <strong>ProGamer_GT</strong>
+                <span>Usuario Premium</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card tilt-3d">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Panel increíble, interfaz espectacular. Los pagos con PayPal son súper rápidos y seguros."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">🏆</div>
+              <div>
+                <strong>ElitePlayer_MX</strong>
+                <span>VIP Member</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card tilt-3d">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Llevo 6 meses con Guate Xiter. El bypass siempre actualizado, nunca me ha fallado."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">💎</div>
+              <div>
+                <strong>KingCheater_CO</strong>
+                <span>Bypass Master</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy" style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
+        © xDavid - GUATE XITER PRO. Todos los derechos reservados.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- ESTADÍSTICAS                                  -->
+  <!-- ============================================= -->
+  <section id="stats" class="section">
+    <h2>📊 Estadísticas Globales</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Datos en tiempo real de nuestra plataforma y comunidad activa.</p>
+
+    <div class="stats-mega-grid">
+      <div class="stat-mega-card tilt-3d" style="--stat-color: var(--primary); --stat-glow: var(--primary-glow);">
+        <div class="stat-mega-icon">👥</div>
+        <div class="stat-mega-num" data-count="547">0</div>
+        <div class="stat-mega-label">Usuarios Registrados</div>
+        <div class="stat-mega-bar"></div>
+      </div>
+      <div class="stat-mega-card tilt-3d" style="--stat-color: var(--secondary); --stat-glow: var(--secondary-glow);">
+        <div class="stat-mega-icon">📦</div>
+        <div class="stat-mega-num" data-count="1248">0</div>
+        <div class="stat-mega-label">Descargas Realizadas</div>
+        <div class="stat-mega-bar"></div>
+      </div>
+      <div class="stat-mega-card tilt-3d" style="--stat-color: #39ff14; --stat-glow: rgba(57,255,20,0.4);">
+        <div class="stat-mega-icon">🛡</div>
+        <div class="stat-mega-num" data-count="99">0</div>
+        <div class="stat-mega-label">% Bypass Efectividad</div>
+        <div class="stat-mega-bar"></div>
+      </div>
+      <div class="stat-mega-card tilt-3d" style="--stat-color: var(--accent); --stat-glow: var(--accent-glow);">
+        <div class="stat-mega-icon">💰</div>
+        <div class="stat-mega-num" data-count="320">0</div>
+        <div class="stat-mega-label">Pagos Procesados</div>
+        <div class="stat-mega-bar"></div>
+      </div>
+      <div class="stat-mega-card tilt-3d" style="--stat-color: #ffaa00; --stat-glow: rgba(255,170,0,0.4);">
+        <div class="stat-mega-icon">⚡</div>
+        <div class="stat-mega-num" data-count="18">0</div>
+        <div class="stat-mega-label">ms Latencia Promedio</div>
+        <div class="stat-mega-bar"></div>
+      </div>
+      <div class="stat-mega-card tilt-3d" style="--stat-color: #ff6b6b; --stat-glow: rgba(255,107,107,0.4);">
+        <div class="stat-mega-icon">🎮</div>
+        <div class="stat-mega-num" data-count="4">0</div>
+        <div class="stat-mega-label">Juegos Soportados</div>
+        <div class="stat-mega-bar"></div>
+      </div>
+    </div>
+
+    <!-- GRAFICA DE ACTIVIDAD SEMANAL -->
+    <div class="card tilt-3d" style="margin-top: 30px;">
+      <h3 style="color: var(--secondary);">📈 Actividad de la Semana</h3>
+      <div class="activity-chart">
+        <div class="activity-bar-group" style="--h: 60%"><div class="activity-bar"></div><span>Lun</span></div>
+        <div class="activity-bar-group" style="--h: 80%"><div class="activity-bar"></div><span>Mar</span></div>
+        <div class="activity-bar-group" style="--h: 45%"><div class="activity-bar"></div><span>Mié</span></div>
+        <div class="activity-bar-group" style="--h: 95%"><div class="activity-bar"></div><span>Jue</span></div>
+        <div class="activity-bar-group" style="--h: 70%"><div class="activity-bar"></div><span>Vie</span></div>
+        <div class="activity-bar-group" style="--h: 100%"><div class="activity-bar"></div><span>Sáb</span></div>
+        <div class="activity-bar-group" style="--h: 55%"><div class="activity-bar"></div><span>Dom</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- VENDEDORES                                    -->
+  <!-- ============================================= -->
+  <section id="vend" class="section">
+    <h2>🔥 Vendedores Autorizados</h2>
+    <p style="color: var(--text-muted); margin-bottom: 25px;">Adquiere tus licencias y bypass con distribuidores oficiales de total confianza.</p>
+    <div class="grid">
+      <div class="card tilt-3d">
+        <div class="vendor-verified-badge">✅ VERIFICADO</div>
+        <img src="https://file.vahalla.cc/be77f985.png" alt="SAMU">
+        <h3>Vendedor Oficial</h3>
+        <h3 style="color: var(--primary); font-size: 1.4rem;">SAMU</h3>
+        <p>Soporte las 24 horas. Métodos de pago internacionales disponibles.</p>
+        <div class="vendor-rating">⭐⭐⭐⭐⭐ <span>(127 ventas)</span></div>
+        <a class="link whatsapp" href="https://wa.me/573117032509" target="_blank">📱 Contactar WhatsApp</a>
+      </div>
+
+      <div class="card tilt-3d">
+        <div class="vendor-verified-badge">✅ VERIFICADO</div>
+        <img src="https://file.vahalla.cc/8f0089d0.png" alt="SIKI">
+        <h3>Vendedor Oficial</h3>
+        <h3 style="color: var(--secondary); font-size: 1.4rem;">SIKI</h3>
+        <p>Entrega inmediata de llaves de activación para Bypass y Panel FF.</p>
+        <div class="vendor-rating">⭐⭐⭐⭐⭐ <span>(98 ventas)</span></div>
+        <a class="link whatsapp" href="https://wa.me/573182584483" target="_blank">📱 Contactar WhatsApp</a>
+      </div>
+
+      <div class="card tilt-3d">
+        <div class="vendor-verified-badge">✅ VERIFICADO</div>
+        <img src="https://file.vahalla.cc/d3b17e2a.png" alt="LALO">
+        <h3>Vendedor Oficial</h3>
+        <h3 style="color: var(--accent); font-size: 1.4rem;">LALO</h3>
+        <p>Ventas y asesoramiento personalizado para la configuración del inyector.</p>
+        <div class="vendor-rating">⭐⭐⭐⭐⭐ <span>(74 ventas)</span></div>
+        <a class="link whatsapp" href="https://wa.me/5215615520491" target="_blank">📱 Contactar WhatsApp</a>
+      </div>
+
+      <div class="card tilt-3d">
+        <div class="vendor-verified-badge">✅ VERIFICADO</div>
+        <img src="https://file.vahalla.cc/e6ebb025.jpg" alt="SEBAS">
+        <h3>Vendedor Oficial</h3>
+        <h3 style="color: var(--primary); font-size: 1.4rem;">SEBAS</h3>
+        <p>Distribuidor autorizado local con ofertas exclusivas por volumen.</p>
+        <div class="vendor-rating">⭐⭐⭐⭐⭐ <span>(56 ventas)</span></div>
+        <a class="link whatsapp" href="https://wa.me/50232509982" target="_blank">📱 Contactar WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- REDES                                         -->
+  <!-- ============================================= -->
+  <section id="redes" class="section">
+    <h2>🌐 Redes Sociales Oficiales</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Sigue nuestros canales para estar al tanto de actualizaciones y sorteos.</p>
+    <div class="card tilt-3d" style="max-width: 700px; margin: 0 auto; text-align: center;">
+      <div class="socials">
+        <a href="https://wa.me/50232509982" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://www.tiktok.com/@david_gt.17" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+          <span>TikTok</span>
+        </a>
+        <a href="https://youtube.com/@guate-xiter-cheats" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+          <span>YouTube</span>
+        </a>
+        <a href="https://discord.gg/VkJPrkCfZu" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
+          <span>Discord</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- PRODUCTOS                                     -->
+  <!-- ============================================= -->
+  <section id="prod" class="section">
+    <h2>🧩 Catálogo de Productos</h2>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      
+      <!-- PRODUCTO 1 -->
+      <div class="card tilt-3d product-card">
+        <img src="https://file.vahalla.cc/1442f9d8.jpeg" alt="Panel Pro">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+          <h3>Panel SaaS Pro</h3>
+          <span class="product-badge popular">POPULAR</span>
+        </div>
+        <p>Panel avanzado en la nube con soporte multi-juego, inyección silenciosa y actualizador integrado.</p>
+        <div class="product-price">
+          <span class="price-original">$20.00</span>
+          <span class="price-current">$15.00 USD</span>
+        </div>
+        <button class="btn" style="width: 100%; margin-top: 15px;" onclick="clickSound();show('buy')">🛒 Adquirir en Tienda</button>
+      </div>
+
+      <!-- PRODUCTO 2 -->
+      <div class="card tilt-3d product-card">
+        <img src="https://file.vahalla.cc/65aecf90.jpg" alt="Panel Anti-Cheat">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+          <h3>Panel Anti-Cheat</h3>
+          <span class="product-badge secure">SEGURO</span>
+        </div>
+        <p>Panel dedicado para evitar la detección por firmas y emulación. Actualizado contra parches recientes.</p>
+        <div class="product-price">
+          <span class="price-original">$12.00</span>
+          <span class="price-current">$4.00 USD</span>
+        </div>
+        <button class="btn" style="width: 100%; margin-top: 15px;" onclick="clickSound();show('buy')">🛒 Adquirir en Tienda</button>
+      </div>
+
+    </div>
+
+    <!-- MODAL DE PAYPAL PARA PRODUCTO -->
+    <div id="product-paypal-modal" class="modal-overlay" style="display:none;">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeProductModal()">✕</button>
+        <h3 id="modal-product-name" style="color:var(--primary); margin-bottom:5px;"></h3>
+        <p id="modal-product-price" style="color:var(--secondary); font-family:var(--font-tech); font-size:1.5rem; margin-bottom:20px;"></p>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:20px;">Pago seguro procesado por PayPal. Después del pago, tu producto se activará automáticamente.</p>
+        <div id="paypal-product-buttons-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- PRECIOS                                       -->
+  <!-- ============================================= -->
+  <!-- PRECIOS                                       -->
+  <!-- ============================================= -->
+  <section id="price" class="section">
+    <h2>💰 Suscripciones y Planes</h2>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      
+      <!-- PLAN SEMANAL -->
+      <div class="card tilt-3d price-card">
+        <div class="price-tier-badge" style="background: rgba(142, 45, 226, 0.15); color: #c084fc;">SEMANAL</div>
+        <img src="https://file.vahalla.cc/1442f9d8.jpeg" alt="Panel Semanal">
+        <h3>Licencia PANEL SEMANAL</h3>
+        <p>Acceso por 7 días de Panel activo y soporte para inyecciones ilimitadas en el juego.</p>
+        <div class="price-feature-list">
+          <div class="price-feature">✅ Panel Anti-Cheat (7 días)</div>
+          <div class="price-feature">✅ Soporte por WhatsApp</div>
+          <div class="price-feature">✅ Limpiador de HWID</div>
+          <div class="price-feature">✅ Soporte 24/7 prioritario</div>
+        </div>
+        <div style="font-size: 24px; color: #c084fc; font-family: var(--font-tech); font-weight: bold; margin: 15px 0;">$8.00 USD</div>
+        <button class="btn secondary-btn" style="width: 100%; margin-top: 15px;" onclick="clickSound();show('buy')">🛒 Adquirir en Tienda</button>
+      </div>
+
+      <!-- PLAN 15 DÍAS -->
+      <div class="card tilt-3d price-card">
+        <div class="price-tier-badge" style="background: rgba(255, 0, 170, 0.2); color: var(--primary);">15 DÍAS</div>
+        <img src="https://file.vahalla.cc/1442f9d8.jpeg" alt="Panel 15 Días">
+        <h3>Licencia PANEL 15 DÍAS</h3>
+        <p>Acceso por 15 días a todo el arsenal: Panel indetectado y Panel SaaS Pro.</p>
+        <div class="price-feature-list">
+          <div class="price-feature">✅ Panel Anti-Cheat (15 días)</div>
+          <div class="price-feature">✅ Panel SaaS Pro Completo</div>
+          <div class="price-feature">✅ Soporte 24/7 dedicado</div>
+          <div class="price-feature">✅ Licencia HWID exclusiva</div>
+        </div>
+        <div style="font-size: 24px; color: var(--primary); font-family: var(--font-tech); font-weight: bold; margin: 15px 0;">$12.00 USD</div>
+        <button class="btn secondary-btn" style="width: 100%; margin-top: 15px;" onclick="clickSound();show('buy')">🛒 Adquirir en Tienda</button>
+      </div>
+
+      <!-- PLAN MENSUAL -->
+      <div class="card tilt-3d price-card price-featured">
+        <div class="price-tier-badge" style="background: rgba(57, 255, 20, 0.15); color: #39ff14;">⭐ RECOMENDADO</div>
+        <img src="https://file.vahalla.cc/1442f9d8.jpeg" alt="Panel Mensual">
+        <h3>Licencia PANEL MENSUAL</h3>
+        <p>Acceso completo por 30 días con actualizaciones del Panel, soporte VIP y HWID Reset.</p>
+        <div class="price-feature-list">
+          <div class="price-feature">✅ Acceso completo (30 días)</div>
+          <div class="price-feature">✅ Actualizaciones VIP automáticas</div>
+          <div class="price-feature">✅ Soporte del Programador</div>
+          <div class="price-feature">✅ HWID Reset ilimitado</div>
+        </div>
+        <div style="font-size: 24px; color: #39ff14; font-family: var(--font-tech); font-weight: bold; margin: 15px 0;">$22.00 USD</div>
+        <button class="btn" style="width: 100%; margin-top: 15px;" onclick="clickSound();show('buy')">🛒 Adquirir en Tienda</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- COMPRAR (TIENDA DINÁMICA DE 8 PRODUCTOS)      -->
+  <!-- ============================================= -->
+  <section id="buy" class="section">
+    <h2>🛒 Tienda de Productos y Planes</h2>
+    <p style="color: var(--text-muted); margin-bottom: 20px;">Catálogo premium editable. Adquiere tus llaves de activación con tu saldo o PayPal de forma inmediata.</p>
+    <div style="display:flex; gap:10px; margin-bottom:25px; flex-wrap:wrap; justify-content:center;">
+      <button class="buy-filter-btn active" data-category="all" onclick="filterBuyByCategory('all')" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:white; padding:8px 18px; border-radius:10px; cursor:pointer; font-size:13px; font-weight:600; transition:all 0.3s;">🎯 Todos</button>
+      <button class="buy-filter-btn" data-category="panel" onclick="filterBuyByCategory('panel')" style="background:rgba(142,45,226,0.15); border:1px solid rgba(142,45,226,0.35); color:#c084fc; padding:8px 18px; border-radius:10px; cursor:pointer; font-size:13px; font-weight:600; transition:all 0.3s;">🛡️ Panel</button>
+      <button class="buy-filter-btn" data-category="bypass" onclick="filterBuyByCategory('bypass')" style="background:rgba(0,240,255,0.15); border:1px solid rgba(0,240,255,0.35); color:var(--secondary); padding:8px 18px; border-radius:10px; cursor:pointer; font-size:13px; font-weight:600; transition:all 0.3s;">🔑 Bypass</button>
+    </div>
+    <div class="grid" id="buy-products-grid">
+      <!-- Rellenado dinámicamente con JS (8 productos configurables con filtro por categoría) -->
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- RANKING VIP                                   -->
+  <!-- ============================================= -->
+  <section id="rank" class="section">
+    <h2>🏆 Ranking VIP</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Clasificación en tiempo real de los usuarios que más saldo y compras han acumulado.</p>
+    
+    <div class="card tilt-3d" style="max-width: 800px; margin: 0 auto; padding: 30px;">
+      <div id="rank-list-container">
+        <!-- Rellenado dinámicamente con JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- RECOMENDACIONES / SUGERENCIAS                  -->
+  <!-- ============================================= -->
+  <section id="recom" class="section">
+    <h2>💬 Recomendaciones y Comentarios</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Aquí puedes ver lo que dice la comunidad y dejar tu propia recomendación sobre Guate Xiter Pro.</p>
+    
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; align-items: start;">
+      
+      <!-- FORMULARIO DE RECOMENDACIÓN -->
+      <div class="card tilt-3d" style="padding: 25px; border-color: rgba(0, 240, 255, 0.2);">
+        <h3 style="color: var(--secondary); margin-bottom: 20px; text-shadow: 0 0 10px var(--secondary-glow);">Escribe tu Recomendación</h3>
+        
+        <form id="recommendation-form" onsubmit="handleSendRecommendation(event)">
+          <div class="form-group">
+            <label for="recom-name">Tu Alias / Nombre</label>
+            <input type="text" id="recom-name" class="input-glass" placeholder="Ej: xDavid" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="recom-message">Tu Opinión / Sugerencia</label>
+            <textarea id="recom-message" class="input-glass" rows="4" placeholder="¿Qué opinas sobre el bypass o el soporte técnico? ¡Escríbelo aquí!" required style="height: 100px; resize: none; font-family: inherit;"></textarea>
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label style="margin-bottom: 8px; display: block;">Calificación</label>
+            <div class="rating-stars-input" id="stars-container" style="display: flex; gap: 8px; font-size: 26px; color: #ffaa00; cursor: pointer; user-select: none;">
+              <span class="star-btn" data-value="1" onclick="setRecomRating(1)" style="transition: transform 0.2s;">★</span>
+              <span class="star-btn" data-value="2" onclick="setRecomRating(2)" style="transition: transform 0.2s;">★</span>
+              <span class="star-btn" data-value="3" onclick="setRecomRating(3)" style="transition: transform 0.2s;">★</span>
+              <span class="star-btn" data-value="4" onclick="setRecomRating(4)" style="transition: transform 0.2s;">★</span>
+              <span class="star-btn" data-value="5" onclick="setRecomRating(5)" style="transition: transform 0.2s;">★</span>
+            </div>
+            <input type="hidden" id="recom-rating" value="5">
+          </div>
+          
+          <button type="submit" class="btn" style="width: 100%; margin-top: 0; background: linear-gradient(135deg, var(--secondary), var(--primary)); box-shadow: 0 5px 15px rgba(0, 240, 255, 0.2);">🚀 Enviar Recomendación</button>
+        </form>
+      </div>
+      
+      <!-- BUZÓN DE COMENTARIOS RECIENTES -->
+      <div class="card tilt-3d" style="padding: 25px; max-height: 520px; display: flex; flex-direction: column; border-color: rgba(255, 0, 170, 0.2);">
+        <h3 style="color: var(--primary); margin-bottom: 20px; text-shadow: 0 0 10px var(--primary-glow);">Opiniones de la Comunidad</h3>
+        
+        <div id="recommendations-list" class="custom-scroll" style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; padding-right: 5px;">
+          <!-- Rellenado dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FAQ                                           -->
+  <!-- ============================================= -->
+  <section id="faq" class="section">
+    <h2>❓ Preguntas Frecuentes</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Todo lo que necesitas saber antes de comprar.</p>
+
+    <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>🛡 ¿El bypass me puede banear?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Nuestro bypass está diseñado con tecnología antidetect avanzada. Llevamos más de 2 años actualizando contra cada parche. La probabilidad de ban es prácticamente nula si sigues nuestras instrucciones de configuración.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>💳 ¿Cómo funciona el pago con PayPal?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          El pago se procesa de forma segura a través de PayPal. Puedes usar tu cuenta PayPal o pagar directamente con tarjeta de crédito/débito. Una vez confirmado el pago, tu licencia se activa automáticamente en tu perfil.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>💰 ¿Cómo funciona el sistema de saldo?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Puedes recargar saldo desde la sección "💳 Saldo" usando PayPal. El saldo queda guardado en tu cuenta y lo puedes usar para comprar productos directamente sin necesidad de pagar con PayPal cada vez.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>⚙ ¿Con qué emuladores funciona el bypass?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          El bypass es compatible con BlueStacks 5, LDPlayer y NoxPlayer. Recomendamos BlueStacks 5 para el mejor rendimiento. Los emuladores están disponibles en nuestro Centro de Descargas.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>🔑 ¿Cuántas claves puedo generar?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Cada cuenta tiene derecho a 1 clave de licencia Bypass y 1 clave de Panel. Las claves son únicas e intransferibles y están vinculadas a tu HWID. Si necesitas resetear tu HWID, contacta soporte.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>📦 ¿Dónde descargo los archivos?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Todos los archivos están disponibles en la sección "📦 Descargas". Ahí encontrarás el Panel, el Bypass, los emuladores recomendados y los archivos del juego. Las descargas son seguras y verificadas.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>📞 ¿Qué pasa si tengo problemas?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Tenemos soporte 24/7 a través de WhatsApp. Puedes contactar directamente al developer (+502 3250 9982) o a cualquiera de nuestros vendedores autorizados. También estamos en Discord para soporte comunitario.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- DESCARGAS                                     -->
+  <!-- ============================================= -->
+  <section id="desc" class="section">
+    <h2>🤖 Inteligencia Artificial & Descargas</h2>
+    <p style="color: var(--text-muted); margin-bottom: 25px;">Hazle preguntas técnicas a la IA, obtén guías o descarga archivos al instante.</p>
+    
+    <div class="downloads-ai-layout" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; align-items: start;">
+      <!-- LADO IZQUIERDO: DESCARGAS -->
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <div class="card tilt-3d" style="padding: 15px 20px; background: rgba(0,0,0,0.25);">
+          <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 14px;">📦 Archivos de Juego</h3>
+          <a class="link" href="https://www.mediafire.com/file/lbkphj2r4083kt8/Free+Fire+-+Tela.xapk/file" target="_blank" onclick="simulateDownload('FF TELA')">FF TELA - GUATE XITER</a>
+          <a class="link" href="https://www.mediafire.com/file/5kwmcyexfuv8q2m/Free+Fire+-+V7.xapk/file" target="_blank" onclick="simulateDownload('FF NORMAL')">FF NORMAL - GUATE XITER</a>
+        </div>
+
+        <div class="card tilt-3d" style="padding: 15px 20px; background: rgba(0,0,0,0.25);">
+          <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 14px;">📦 Aplicativos de Activación</h3>
+          <a class="link" href="https://www.mediafire.com/file/jv02gusw3tlakoj/GuateXiters__-_Bypass.exe/file" target="_blank" onclick="simulateDownload('EXE BYPASS')">EXE BYPASS (Inyector)</a>
+          <a class="link" href="https://www.mediafire.com/file/anpzlzpy0exrg48/Guate_Xiter.exe/file" target="_blank" onclick="simulateDownload('EXE PANEL')">EXE PANEL (Instalador)</a>
+          <a class="link" href="https://www.mediafire.com/file/2n1qkliw3e3q2w5/Instalar_Requisitos.rar/file" target="_blank" onclick="simulateDownload('REQUISITOS')">REQUERIMIENTOS DE SISTEMA</a>
+        </div>
+
+        <div class="card tilt-3d" style="padding: 15px 20px; background: rgba(0,0,0,0.25);">
+          <h3 style="color: var(--accent); margin-bottom: 10px; font-size: 14px;">📦 Herramientas y Emuladores</h3>
+          <a class="link" href="https://www.mediafire.com/file/0v0vd4onbdhjpp2/BSTCleaner_native.exe/file" target="_blank" onclick="simulateDownload('LIMPIAR EMULADOR')">LIMPIAR EMULADOR</a>
+          <a class="link" href="https://www.mediafire.com/file/lopw3stee0oasp6/BlueStacks_5.22.130_%252829%2529.exe/file" target="_blank" onclick="simulateDownload('BLUESTACKS v5')">EMULADOR RECOMENDADO 1</a>
+          <a class="link" href="https://www.mediafire.com/file/19fnc5dzogdqjih/BlueStacksMicroInstaller_5.22.75.6322_native.exe/file" target="_blank" onclick="simulateDownload('BLUESTACKS v5 MICRO')">EMULADOR RECOMENDADO 2</a>
+        </div>
+      </div>
+      
+      <!-- LADO DERECHO: CHAT IA -->
+      <div class="chat-wrap" style="margin-top: 0; min-height: 480px;">
+        <div class="chat-header">
+          <div class="bot-avatar gx" id="ai-bot-avatar">🤖</div>
+          <div style="flex:1;">
+            <span class="chat-title" id="ai-chat-title">IA Asistente Guate Xiter</span>
+            <span class="chat-status" id="ai-chat-status">Inteligencia Artificial activa 24/7</span>
+          </div>
+        </div>
+        <!-- Selector de Modo IA -->
+        <div class="ai-mode-selector">
+          <button class="ai-mode-btn active" id="ai-mode-support" onclick="switchAiMode('support')">
+            <span>🎮</span> Soporte Gamer
+          </button>
+          <button class="ai-mode-btn" id="ai-mode-student" onclick="switchAiMode('student')">
+            <span>📚</span> IA Estudiantes
+          </button>
+        </div>
+        <div id="chat-descargas" class="messages" aria-live="polite"></div>
+        <form id="form-descargas" class="composer">
+          <input
+            type="text"
+            id="input-descargas"
+            placeholder="Pregúntale a la IA (ej: dame los links, cómo quito el lag)..."
+            autocomplete="off"
+            style="font-family: var(--font-sans);"
+          />
+          <button type="submit" class="send-btn" aria-label="Enviar">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </form>
+        <div class="quick-btns" id="quick-descargas"></div>
+      </div>
+    </div>
+
+    <!-- Barra de progreso simulada para descargas -->
+    <div id="download-progress-container" class="card tilt-3d" style="display: none; max-width: 600px; margin: 30px auto 0 auto;">
+      <h3 id="downloading-file-name" style="font-size: 14px; margin-bottom: 10px;">Iniciando descarga...</h3>
+      <div style="background: rgba(0,0,0,0.4); width: 100%; height: 16px; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+        <div id="download-progress-bar" style="background: linear-gradient(90deg, var(--primary), var(--secondary)); width: 0%; height: 100%; transition: width 0.1s ease; box-shadow: 0 0 10px var(--secondary);"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); margin-top: 5px;">
+        <span id="download-percent">0%</span>
+        <span>Descarga digital segura</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CONTACTO                                      -->
+  <!-- ============================================= -->
+  <section id="cont" class="section">
+    <h2>📞 Soporte Técnico y Contacto</h2>
+    <div class="card center tilt-3d" style="max-width: 600px; margin: 0 auto; padding: 40px;">
+      <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 15px;">¿Tienes dudas sobre la instalación o compra?</p>
+      <p>Habla directamente con el programador del sistema:</p>
+      
+      <div style="font-size: 2.2rem; font-family: var(--font-tech); font-weight: 900; color: var(--primary); text-shadow: 0 0 15px var(--primary-glow); margin: 25px 0;">
+        +502 3250 9982
+      </div>
+
+      <a class="link whatsapp" href="https://wa.me/50232509982" target="_blank" style="max-width: 300px; margin: 0 auto;">
+        📥 CONTACTAR DEVELOPER
+      </a>
+
+      <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <a href="https://discord.gg/VkJPrkCfZu" target="_blank" class="link" style="max-width: 200px; background: rgba(88,101,242,0.15); border-color: rgba(88,101,242,0.4); color: #7289da;">
+          💬 Discord Server
+        </a>
+        <a href="https://youtube.com/@guate-xiter-cheats" target="_blank" class="link" style="max-width: 200px; background: rgba(255,0,0,0.1); border-color: rgba(255,0,0,0.3); color: #ff4444;">
+          📺 YouTube Canal
+        </a>
+      </div>
+
+      <p class="copy" style="margin-top: 40px;">
+        © xDavid - All Rights Reserved. GUATE XITER PRO Core Engine v3.2
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- AUTH (LOGIN / REGISTRO)                       -->
+  <!-- ============================================= -->
+  <section id="auth" class="section">
+    <div class="auth-wrapper">
+      <div class="flip-container">
+        <div id="auth-card" class="flip-card">
+          
+          <!-- LADO FRONTAL: INICIAR SESIÓN -->
+          <div class="front" id="normal-login-card">
+            <div class="logo-container">
+              <img id="login-logo" class="logo-auth" src="https://file.vahalla.cc/66b93f29.png" alt="Logo">
+              <h3>Iniciar Sesión</h3>
+              <p>Guate Xiter Pro Panel</p>
+              <p>regístrate para obtener licencias gratis</p>
+            </div>
+            
+            <form id="login-form" onsubmit="handleLogin(event)">
+              <div class="form-group">
+                <label for="login-username">Usuario</label>
+                <input type="text" id="login-username" class="input-glass" placeholder="Ej: xDavid" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" class="input-glass" placeholder="••••••••" required>
+              </div>
+              <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; margin-top: -8px;">
+                <input type="checkbox" id="login-remember" style="accent-color: var(--secondary); cursor: pointer; width: 16px; height: 16px;">
+                <label for="login-remember" style="margin: 0; cursor: pointer; text-transform: none; font-size: 12px; color: var(--text-muted);">Recordarme en este equipo</label>
+              </div>
+              <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Acceder al Sistema</button>
+            </form>
+            
+            <div class="auth-toggle">
+              ¿No tienes cuenta? <span class="auth-toggle-btn" onclick="toggleAuthCard()">Regístrate aquí</span>
+            </div>
+            <div class="auth-toggle" style="margin-top: 10px;">
+              ¿Eres Administrador? <span class="auth-toggle-btn" style="color: var(--primary);" onclick="toggleAdminLogin(true)">Portal Admin</span>
+            </div>
+          </div>
+
+          <!-- LADO ADMIN: LOGIN PORTAL ADMIN -->
+          <div class="front" id="admin-login-card" style="display: none; border-color: var(--primary); z-index: 5;">
+            <div class="logo-container">
+              <img id="admin-login-logo" class="logo-auth" src="https://file.vahalla.cc/66b93f29.png" alt="Logo" style="border-color: var(--primary); box-shadow: 0 0 20px var(--primary-glow);">
+              <h3 style="color: var(--primary); text-shadow: 0 0 10px var(--primary-glow);">Portal Admin</h3>
+              <p>Control de Seguridad Guate Xiter</p>
+              <p style="color: #39ff14; font-size:10px;">🔒 ACCESO RESTRINGIDO</p>
+            </div>
+            
+            <form id="admin-login-form" onsubmit="handleAdminLogin(event)">
+              <div class="form-group">
+                <label for="admin-username" style="color: var(--primary);">Usuario Administrador</label>
+                <input type="text" id="admin-username" class="input-glass" placeholder="Ej: xDavid" style="border-color: rgba(255, 0, 170, 0.3);" required>
+              </div>
+              <div class="form-group">
+                <label for="admin-password" style="color: var(--primary);">Contraseña Admin</label>
+                <input type="password" id="admin-password" class="input-glass" placeholder="••••••••" style="border-color: rgba(255, 0, 170, 0.3);" required>
+              </div>
+              <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; margin-top: -8px;">
+                <input type="checkbox" id="admin-remember" style="accent-color: var(--primary); cursor: pointer; width: 16px; height: 16px;">
+                <label for="admin-remember" style="margin: 0; cursor: pointer; text-transform: none; font-size: 12px; color: var(--text-muted);">Recordarme como Admin</label>
+              </div>
+              <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background: linear-gradient(135deg, var(--primary), var(--accent));">Iniciar Consola Admin</button>
+            </form>
+            
+            <div class="auth-toggle">
+              ¿No eres admin? <span class="auth-toggle-btn" onclick="toggleAdminLogin(false)">Volver al inicio</span>
+            </div>
+          </div>
+
+          <!-- LADO POSTERIOR: REGISTRARSE -->
+          <div class="back">
+            <div class="logo-container">
+              <img id="register-logo" class="logo-auth" src="https://file.vahalla.cc/66b93f29.png" alt="Logo">
+              <h3>Registrarse</h3>
+              <p>Crea tu cuenta de miembro</p>
+              <p>regístrate para obtener licencias gratis</p>
+            </div>
+            
+            <form id="register-form" onsubmit="handleRegister(event)">
+              <div class="form-group">
+                <label for="reg-username">Nombre de Usuario</label>
+                <input type="text" id="reg-username" class="input-glass" placeholder="Ej: xDavid" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-email">Correo Electrónico</label>
+                <input type="email" id="reg-email" class="input-glass" placeholder="correo@ejemplo.com" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-password">Contraseña</label>
+                <input type="password" id="reg-password" class="input-glass" placeholder="Mínimo 6 caracteres" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-logo">URL del Logotipo (Opcional)</label>
+                <input type="url" id="reg-logo" class="input-glass" placeholder="https://...">
+              </div>
+              <button type="submit" class="btn" style="width: 100%; margin-top: 5px;">Crear Cuenta</button>
+            </form>
+            
+            <div class="auth-toggle">
+              ¿Ya tienes cuenta? <span class="auth-toggle-btn" onclick="toggleAuthCard()">Inicia sesión</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- PERFIL / DASHBOARD                            -->
+  <!-- ============================================= -->
+  <section id="profile" class="section">
+    <h2>Dashboard de Usuario SaaS</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Panel de administración exclusivo de tus licencias, estados de inyección y descargas.</p>
+    
+    <div class="dashboard-grid">
+      <!-- Tarjeta de Perfil de Usuario -->
+      <div class="card profile-card tilt-3d">
+        <div class="profile-avatar-container">
+          <img id="user-avatar" class="profile-avatar" src="https://file.vahalla.cc/66b93f29.png" alt="Avatar">
+          <span id="user-rank" class="rank-badge">VIP GOLD</span>
+        </div>
+        <h3 id="user-name">xDavid Gamer</h3>
+        <p id="user-email" class="email">david_gt@guatexiter.pro</p>
+        
+        <!-- SALDO -->
+        <div class="balance-display">
+          <span class="balance-label">💰 Saldo Disponible</span>
+          <span class="balance-amount" id="user-balance-display">$0.00</span>
+          <button class="btn" style="width:100%; margin-top:8px; font-size:12px; padding:10px;" onclick="clickSound();show('recharge')">➕ Recargar Saldo</button>
+        </div>
+
+        <div class="profile-stats-grid">
+          <div class="profile-stat-box">
+            <span>Licencia Bypass</span>
+            <strong id="license-status">ACTIVO</strong>
+          </div>
+          <div class="profile-stat-box">
+            <span>Días Restantes</span>
+            <strong id="license-days">1 días</strong>
+          </div>
+          <div class="profile-stat-box">
+            <span>HWID</span>
+            <strong id="hwid-status">Vinculado</strong>
+          </div>
+          <div class="profile-stat-box">
+            <span>Descargas</span>
+            <strong id="download-count">0</strong>
+          </div>
+        </div>
+        
+        <button class="btn secondary-btn" style="width: 100%;" onclick="handleLogout()">
+          Cerrar Sesión
+        </button>
+        <button id="admin-panel-btn" class="btn" style="width:100%; margin-top:8px; background: linear-gradient(135deg, #ff00aa, #8e2de2); display:none;" onclick="clickSound();showAdminPanel()">
+          🔧 Panel Admin
+        </button>
+      </div>
+
+      <!-- Dashboard de Acciones y Registros de la Consola -->
+      <div class="dashboard-actions">
+        <!-- Historial de Transacciones -->
+        <div class="card tilt-3d">
+          <h3 style="color: #39ff14;">💳 Historial de Transacciones</h3>
+          <div id="transaction-history" class="transaction-list">
+            <p style="color: var(--text-muted); font-size: 13px; text-align: center; padding: 20px;">No hay transacciones aún.</p>
+          </div>
+        </div>
+
+        <!-- Historial de Keys Adquiridas -->
+        <div class="card tilt-3d" style="border-color: rgba(0, 240, 255, 0.3); box-shadow: 0 0 18px rgba(0, 240, 255, 0.05);">
+          <h3 style="color: var(--secondary);">🔑 Historial de Keys Adquiridas</h3>
+          <div id="keys-history" class="keys-history-list" style="max-height: 250px; overflow-y: auto;">
+            <p style="color: var(--text-muted); font-size: 13px; text-align: center; padding: 20px;">No hay keys adquiridas aún.</p>
+          </div>
+        </div>
+
+        <!-- Generador de Licencias Bypass -->
+        <div class="card key-generator tilt-3d">
+          <h3 style="color: var(--secondary);">🔑 Generador de Licencia Bypass</h3>
+          <p>Obtén claves de sesión únicas de inyección digital. Úsalas en tu cliente de escritorio `.exe`.</p>
+          <button class="btn" onclick="generateLicenseKey()">Generar Nueva Clave</button>
+          
+          <div class="key-display">
+            <span id="generated-key">VINCULA_TU_CUENTA_PARA_GENERAR</span>
+            <button class="copy-btn" onclick="copyLicenseKey()">Copiar</button>
+          </div>
+        </div>
+
+        <!-- Generador de Keys de Panel -->
+        <div class="card key-generator tilt-3d" style="border-color: rgba(255,0,170,0.35); box-shadow: 0 0 18px rgba(255,0,170,0.10);">
+          <h3 style="color: var(--primary); text-shadow: 0 0 12px var(--primary-glow);">🛡 Generador de Keys de Panel</h3>
+          <p>Genera tu clave exclusiva de acceso al Panel. Cada usuario obtiene una clave única e intransferible.</p>
+          <button class="btn" style="background: linear-gradient(135deg, #ff00aa, #8e2de2); box-shadow: 0 0 18px rgba(255,0,170,0.4);" onclick="generatePanelKey()">Generar Key de Panel</button>
+
+          <div class="key-display" style="border-color: rgba(255,0,170,0.3); background: rgba(255,0,170,0.05);">
+            <span id="generated-panel-key" style="color: var(--primary);">VINCULA_TU_CUENTA_PARA_GENERAR</span>
+            <button class="copy-btn" style="background: rgba(255,0,170,0.2); border-color: rgba(255,0,170,0.4); color: var(--primary);" onclick="copyPanelKey()">Copiar</button>
+          </div>
+        </div>
+
+        <!-- Consola de Eventos Virtuales -->
+        <div class="card tilt-3d">
+          <h3 style="color: var(--primary);">🖥 Consola del Servidor SaaS</h3>
+          <p>Registro de actividades en vivo de tu panel y vinculación de inyección digital.</p>
+          <div id="console-logs" class="console-box">
+            <!-- Rellenado por JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- RECARGAR SALDO                                -->
+  <!-- ============================================= -->
+  <section id="recharge" class="section">
+    <h2>💳 Recargar Saldo</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;">Recarga tu saldo de forma segura usando PayPal y úsalo para comprar productos al instante.</p>
+
+    <!-- Saldo actual -->
+    <div class="balance-hero-card card tilt-3d" style="max-width: 500px; margin: 0 auto 30px auto; text-align: center;">
+      <div class="balance-icon">💰</div>
+      <div class="balance-hero-label">Tu Saldo Actual</div>
+      <div class="balance-hero-amount" id="recharge-balance-display">$0.00 USD</div>
+      <div id="recharge-login-hint" style="color: var(--text-muted); font-size: 13px; margin-top: 8px;">Inicia sesión para ver y recargar tu saldo</div>
+    </div>
+
+    <!-- Paquetes de Recarga -->
+    <h3 style="text-align: center; margin-bottom: 20px; color: var(--secondary);">Selecciona un Paquete de Recarga</h3>
+    <div class="recharge-grid">
+      <!-- Paquete 2 USD -->
+      <div class="recharge-card tilt-3d" onclick="selectRechargePackage(this, 2)" data-amount="2">
+        <div class="recharge-amount">$2</div>
+        <div class="recharge-label">USD</div>
+        <div class="recharge-bonus">Sin bonus</div>
+        <div class="recharge-select-btn">Seleccionar</div>
+      </div>
+      <!-- Paquete 5 USD -->
+      <div class="recharge-card tilt-3d" onclick="selectRechargePackage(this, 5)" data-amount="5">
+        <div class="recharge-amount">$5</div>
+        <div class="recharge-label">USD</div>
+        <div class="recharge-bonus">Sin bonus</div>
+        <div class="recharge-select-btn">Seleccionar</div>
+      </div>
+      <!-- Paquete 15 USD -->
+      <div class="recharge-card tilt-3d" onclick="selectRechargePackage(this, 15)" data-amount="15">
+        <div class="recharge-amount">$15</div>
+        <div class="recharge-label">USD</div>
+        <div class="recharge-bonus" style="color: #39ff14;">+$1.50 bonus</div>
+        <div class="recharge-select-btn">Seleccionar</div>
+      </div>
+      <!-- Paquete 30 USD -->
+      <div class="recharge-card tilt-3d featured-recharge" onclick="selectRechargePackage(this, 30)" data-amount="30">
+        <div class="recharge-popular-badge">🔥 POPULAR</div>
+        <div class="recharge-amount">$30</div>
+        <div class="recharge-label">USD</div>
+        <div class="recharge-bonus" style="color: #39ff14;">+$3.50 bonus</div>
+        <div class="recharge-select-btn">Seleccionar</div>
+      </div>
+      <!-- Paquete 50 USD -->
+      <div class="recharge-card tilt-3d" onclick="selectRechargePackage(this, 50)" data-amount="50">
+        <div class="recharge-amount">$50</div>
+        <div class="recharge-label">USD</div>
+        <div class="recharge-bonus" style="color: #39ff14;">+$7.00 bonus</div>
+        <div class="recharge-select-btn">Seleccionar</div>
+      </div>
+      <!-- Paquete 90 USD -->
+      <div class="recharge-card tilt-3d" onclick="selectRechargePackage(this, 90)" data-amount="90">
+        <div class="recharge-amount">$90</div>
+        <div class="recharge-label">USD</div>
+        <div class="recharge-bonus" style="color: #39ff14;">+$15.00 bonus</div>
+        <div class="recharge-select-btn">Seleccionar</div>
+      </div>
+    </div>
+
+    <!-- PayPal Buttons para recarga -->
+    <div class="paypal-recharge-section card tilt-3d" style="max-width: 550px; margin: 30px auto 0 auto;">
+      <h3 style="color: var(--primary); margin-bottom: 5px;">🅿 Pagar con PayPal</h3>
+      <p id="paypal-selected-amount-text" style="color: var(--text-muted); font-size: 13px; margin-bottom: 15px;">Selecciona un paquete arriba para continuar.</p>
+      <div id="paypal-recharge-buttons" style="min-height: 55px;"></div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: 12px; text-align: center;">🔒 Pago procesado de forma 100% segura por PayPal Inc.</p>
+    </div>
+
+    <!-- Información -->
+    <div class="card tilt-3d" style="max-width: 550px; margin: 20px auto 0 auto;">
+      <h3 style="color: var(--secondary); margin-bottom: 15px;">ℹ️ ¿Cómo funciona?</h3>
+      <div class="how-it-works">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <div class="how-step-text">Selecciona el paquete de saldo que deseas recargar.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <div class="how-step-text">Haz clic en el botón de PayPal y completa el pago de forma segura.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <div class="how-step-text">Tu saldo se actualizará automáticamente en tu perfil al instante.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">4</div>
+          <div class="how-step-text">¡Usa tu saldo para comprar productos sin salir de la plataforma!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- WIDGET FLOTANTE DE REPRODUCTOR DE MÚSICA 3D   -->
+  <!-- ============================================= -->
+  <div class="music-player-widget tilt-3d" id="music-widget">
+    <div class="cd-disc" id="music-cd">
+      <div class="cd-center"></div>
+    </div>
+    <div class="music-info">
+      <span class="music-title">EMPILADAZO feat TYPEGE Official Audio Video Oficial</span>
+      <span class="music-artist">EMPILADAZO feat TYPEGE Official Audio Videoo</span>
+    </div>
+    <div class="music-controls">
+      <button class="music-btn" onclick="togglePlayMusic()" id="music-play-btn">▶</button>
+      <div class="volume-slider-container">
+        <span>🔊</span>
+        <input type="range" class="volume-slider" id="music-volume" min="0" max="1" step="0.05" value="0.5">
+      </div>
+    </div>
+  </div>
+
+  <!-- WIDGET FLOTANTE DE VISITANTES CYBERPUNK 3D -->
+  <div class="visitor-counter-widget tilt-3d" id="visitor-widget">
+    <div class="visitor-icon">
+      <span class="eye-glow">👁</span>
+    </div>
+    <div class="visitor-info">
+      <div class="visitor-stat">
+        <span class="stat-value" id="active-users-count">1</span>
+        <span class="stat-label">En Vivo</span>
+      </div>
+      <div class="visitor-divider"></div>
+      <div class="visitor-stat">
+        <span class="stat-value" id="total-views-count">37</span>
+        <span class="stat-label">Vistas</span>
+      </div>
+    </div>
+    <div class="visitor-status" id="visitor-db-status">Simulado</div>
+  </div>
+
+  <!-- REPRODUCTOR OCULTO DE YOUTUBE (fuera de pantalla pero NO display:none para permitir reproducción) -->
+  <div id="yt-player" style="position: fixed; top: -9999px; left: -9999px; width: 200px; height: 200px; opacity: 0; pointer-events: none; overflow: hidden; z-index: -1;"></div>
+
+  <!-- AUDIO ELEMENT -->
+  <audio id="bgmusic" loop>
+    <source src="EMPILADAZO feat TYPEGE.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- SDKs de Firebase Compatibles -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
