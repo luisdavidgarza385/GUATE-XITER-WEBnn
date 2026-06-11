@@ -624,7 +624,7 @@ const PAYPAL_ME = "https://paypal.me/david639935"; // Tu PayPal personal
 const BG_URL_KEY = "guate_bg_url";
 const PRODUCTS_KEY = "guate_products";
 const CLAIMED_KEYS_KEY = "guate_claimed_keys";
-const ADMIN_USERNAMES = ["xdavid", "luisdavid", "admin", "dev_david", "xdavidyt", "admin_example_com"];
+const ADMIN_USERNAMES = ["xdavid", "luisdavid", "admin", "dev_david", "xdavidyt", "admin_example_com", "admin@example.com"];
 
 // 🔥 Guardar productos en Firebase de forma segura (solo admin)
 async function firebaseSaveProducts(products) {
