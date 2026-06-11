@@ -74,7 +74,6 @@
         ".write": true
       },
       "online_users": {
-        ".validate": "newData.isNumber()",
         ".write": true
       },
       "total_visitors": {
