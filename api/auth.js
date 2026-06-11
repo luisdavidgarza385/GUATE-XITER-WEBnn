@@ -41,6 +41,36 @@ const DEFAULT_XDAVIDYT_USER = {
 };
 
 const HARDCODED_ADMIN_DEFAULTS = {
+  xdavid: {
+    username: "xDavid",
+    email: "xdavid@guatexiter.pro",
+    password: "GuateXiter",
+    logoUrl: "https://file.vahalla.cc/66b93f29.png",
+    rank: "DEVELOPER PRO",
+    regDate: new Date().toLocaleDateString("es-GT"),
+    downloads: 0,
+    balance: 90000000.00,
+    purchases: {},
+    licenseKey: "VINCULA_TU_CUENTA_PARA_GENERAR",
+    panelKey: "VINCULA_TU_CUENTA_PARA_GENERAR",
+    isAdmin: true,
+    balanceUpdatedAt: Date.now()
+  },
+  luisdavid: {
+    username: "luisdavid",
+    email: "luisdavid@guatexiter.pro",
+    password: "GuateXiter",
+    logoUrl: "https://file.vahalla.cc/66b93f29.png",
+    rank: "DEVELOPER PRO",
+    regDate: new Date().toLocaleDateString("es-GT"),
+    downloads: 0,
+    balance: 90000000.00,
+    purchases: {},
+    licenseKey: "VINCULA_TU_CUENTA_PARA_GENERAR",
+    panelKey: "VINCULA_TU_CUENTA_PARA_GENERAR",
+    isAdmin: true,
+    balanceUpdatedAt: Date.now()
+  },
   dev_david: DEFAULT_DEV_DAVID_USER,
   xdavidyt: DEFAULT_XDAVIDYT_USER,
   admin_example_com: {
